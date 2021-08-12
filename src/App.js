@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello, world!</h1>
-      <Home />
+      <Home teams={teams} />
     </div>
   );
 }
