@@ -35,7 +35,6 @@ function App() {
           <PlayersPage />
         </Route>
       </Switch>
-
     </div>
   );
 }
