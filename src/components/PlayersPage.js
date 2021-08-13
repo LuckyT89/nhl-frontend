@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PlayerCard from './PlayerCard';
 
 function PlayersPage() {
     // Find the team id from the URL
@@ -19,11 +20,12 @@ function PlayersPage() {
         })
     }, []);
 
-    console.log(players);
+    const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} />);
 
     return (
         <div>
             Players Page component
+            { playerCards }
         </div>
     );
 }

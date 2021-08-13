@@ -9,7 +9,7 @@ function HomePage({ teams }) {
         <div>
             Home page component
 
-            {teamCards}
+            { teamCards }
         </div>
     );
 }
