@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import AddPlayerForm from './AddPlayerForm';
 import PlayerCard from './PlayerCard';
 
 function PlayersPage() {
@@ -24,9 +25,17 @@ function PlayersPage() {
     // Map over the array of player objects and make a PlayerCard component for each one.
     const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} />);
 
+
+
+    function addPlayer() {
+        console.log('Added player!');
+    }
+
     return (
         <div>
             Players Page component
+            <AddPlayerForm addPlayer={addPlayer} />
+            
             { playerCards }
         </div>
     );
