@@ -27,8 +27,24 @@ function PlayersPage() {
 
 
 
-    function addPlayer() {
+    function addPlayer(player) {
         console.log('Added player!');
+
+        player.team_id = teamId;
+        
+        console.log(player);
+
+        const config = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(player)
+        };
+      
+        fetch(`${baseURL}/players`, config)
+            .then(res => res.json())
+            .then(game => console.log('hi'))
     }
 
     return (
