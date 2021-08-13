@@ -1,6 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import TeamsPage from './components/TeamsPage';
+import PlayersPage from './components/PlayersPage';
 
 
 function App() {
@@ -23,7 +26,17 @@ function App() {
   return (
     <div className="App">
       <h1>NHL</h1>
-      <TeamsPage teams={teams} />
+      <Switch>
+      <Route exact path="/">
+        <TeamsPage teams={teams} />
+      </Route>
+
+      <Route path="/players">
+        <PlayersPage />
+      </Route>
+      
+      </Switch>
+
     </div>
   );
 }
