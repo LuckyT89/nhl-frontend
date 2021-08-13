@@ -1,7 +1,6 @@
 
 
 function PlayerCard({ player }) {
-    console.log(player);
     return (
         <div>
             <h3>{player.name}</h3>

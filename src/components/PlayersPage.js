@@ -5,21 +5,23 @@ function PlayersPage() {
     // Find the team id from the URL
     const pathName = window.location.pathname;
     const teamId = pathName.split('/')[2];
-    console.log(teamId);
-
 
     const baseURL = 'http://127.0.0.1:9393';
 
+    // State starts as an empty array
     const [players, setPlayers] = useState([]);
   
+    // Get a list of all players that match the team id from the url. Update state so it 
+    // now has an array of player objects. 
     useEffect(() => {
       fetch(`${baseURL}/players/${teamId}`)
         .then(res => res.json())
         .then(resPlayers => {
           setPlayers(resPlayers);
         })
-    }, []);
+    }, [teamId]); // React console warning wanted teamId in the dependency array here even though it worked without it. 
 
+    // Map over the array of player objects and make a PlayerCard component for each one.
     const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} />);
 
     return (
