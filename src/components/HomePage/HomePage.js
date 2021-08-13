@@ -1,7 +1,7 @@
 import TeamCard from "../TeamCards/TeamCards";
 
 
-function Home({ teams }) {
+function HomePage({ teams }) {
 
     const teamCards = teams.map((team) => <TeamCard key={team.id} team={team} />);
 
@@ -14,4 +14,4 @@ function Home({ teams }) {
     );
 }
 
-export default Home;
+export default HomePage;

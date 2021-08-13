@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import Home from './components/Home/Home';
+import HomePage from './components/HomePage/HomePage';
 
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello, world!</h1>
-      <Home teams={teams} />
+      <h1>NHL</h1>
+      <HomePage teams={teams} />
     </div>
   );
 }
