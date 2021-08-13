@@ -7,7 +7,7 @@ function HomePage({ teams }) {
 
     return (
         <div>
-            Home component
+            Home page component
 
             {teamCards}
         </div>
