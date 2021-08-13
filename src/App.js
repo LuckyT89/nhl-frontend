@@ -27,14 +27,13 @@ function App() {
     <div className="App">
       <h1>NHL</h1>
       <Switch>
-      <Route exact path="/">
-        <TeamsPage teams={teams} />
-      </Route>
+        <Route exact path="/">
+          <TeamsPage teams={teams} />
+        </Route>
 
-      <Route path="/players">
-        <PlayersPage />
-      </Route>
-      
+        <Route path="/players/:id">
+          <PlayersPage />
+        </Route>
       </Switch>
 
     </div>
