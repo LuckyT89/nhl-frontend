@@ -1,10 +1,16 @@
 
 
-function PlayerCard({ player }) {
+function PlayerCard({ player, removePlayer }) {
+
+    function handleRemovePlayer() {
+        removePlayer(player.id);
+    }
+
     return (
         <div>
             <h3>{player.name}</h3>
             <p>#{player.number} Height: {player.height} Weight: {player.weight} </p>
+            <button onClick={handleRemovePlayer} >Delete</button>
         </div>
     );
 }
