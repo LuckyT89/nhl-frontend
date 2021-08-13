@@ -1,4 +1,4 @@
-import TeamCard from "../TeamCards/TeamCards";
+import TeamCard from "./TeamCards";
 
 
 function HomePage({ teams }) {
