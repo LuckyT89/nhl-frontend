@@ -1,5 +1,4 @@
--add all teams
--add team logos
+
 -add player data
 -add player pictures
 -clear form after adding a player
