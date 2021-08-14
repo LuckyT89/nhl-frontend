@@ -1,0 +1,11 @@
+-add all teams
+-add team logos
+-add player data
+-add player pictures
+-clear form after adding a player
+-add hero image
+-change browser title
+-change broswer tab image
+-toggle form to hide/show
+-toggle delete player button
+-add footer to credit NHL.com

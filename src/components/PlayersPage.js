@@ -22,12 +22,13 @@ function PlayersPage() {
         })
     }, [teamId]); // React console warning wanted teamId in the dependency array here even though it worked without it. 
 
-    // Map over the array of player objects and make a PlayerCard component for each one.
+    // Map over the array of player objects stored in state and make a PlayerCard component for each one.
     const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} removePlayer={removePlayer} />);
 
 
 
-    // Add a player to the backend when the form button is clicked. 
+    // Add a player to the backend when the form button is clicked and then show this 
+    // change on the front end. 
     function addPlayer(player) {
         console.log('Added player!');
 
@@ -45,11 +46,12 @@ function PlayersPage() {
       
         fetch(`${baseURL}/players`, config)
             .then(res => res.json())
-            .then(game => console.log('hi'))
+            .then(player => setPlayers([...players, player]))
     }
 
 
-    // Remove a player from the backend and also update the front end to show this change. 
+    // Remove a player from the backend when the delete button on a card is clicked 
+    // and then update the front end to show this change. 
     function removePlayer(playerId) {
         console.log('remove a player');
         console.log(playerId);
@@ -58,6 +60,8 @@ function PlayersPage() {
             .then(res => res.json())
             .then(() => setPlayers(players.filter(player => player.id !== playerId)))
     }
+
+
 
     return (
         <div>
