@@ -45,6 +45,14 @@ form {
 }
 
 
+button.show {
+    display: inline;
+}
+button.hide {
+    display: none;
+}
+
+
 
 /* Main App div style */
 div.App {

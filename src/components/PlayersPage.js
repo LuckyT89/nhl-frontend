@@ -22,8 +22,15 @@ function PlayersPage() {
         })
     }, [teamId]); // React console warning wanted teamId in the dependency array here even though it worked without it. 
 
+
+    // Toggle to show/hide player delete buttons
+    const [showDeleteBtn, setShowDeleteBtn] = useState(false);
+    function toggleDeleteBtn() {
+        setShowDeleteBtn(!showDeleteBtn);
+    }
+
     // Map over the array of player objects stored in state and make a PlayerCard component for each one.
-    const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} removePlayer={removePlayer} />);
+    const playerCards = players.map((player) => <PlayerCard key={player.id} player={player} removePlayer={removePlayer} showDeleteBtn={showDeleteBtn} />);
 
 
 
@@ -71,9 +78,11 @@ function PlayersPage() {
 
 
 
+
+
     return (
         <div className="players-page">
-            <button className="toggle-btn" onClick={toggleForm}>Add Player</button><button className="toggle-btn">Delete Player</button>
+            <button className="toggle-btn" onClick={toggleForm}>Add Player</button><button className="toggle-btn" onClick={toggleDeleteBtn} >Delete Player</button>
             <AddPlayerForm showForm={showForm} addPlayer={addPlayer}/>
             
             { playerCards }

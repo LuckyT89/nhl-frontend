@@ -1,7 +1,5 @@
 
 
--style buttons
--style form
 -toggle delete player button
 -clear form after adding a player
 -transition on form toggle?
