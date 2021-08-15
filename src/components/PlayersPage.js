@@ -63,8 +63,8 @@ function PlayersPage() {
 
 
 
+    // Simple toggle to show/hide form
     const [showForm, setShowForm] = useState(false);
-
     function toggleForm() {
         setShowForm(!showForm);
     }
@@ -72,8 +72,8 @@ function PlayersPage() {
 
 
     return (
-        <div>
-            <button onClick={toggleForm}>Add Player</button><button>Delete Player</button>
+        <div className="players-page">
+            <button className="toggle-btn" onClick={toggleForm}>Add Player</button><button className="toggle-btn">Delete Player</button>
             <AddPlayerForm showForm={showForm} addPlayer={addPlayer}/>
             
             { playerCards }

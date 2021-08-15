@@ -52,14 +52,16 @@ function AddPlayerForm({ addPlayer, showForm }) {
 
     return (
         <div className={showForm? "show" : "hide"} >
-            <input placeholder="Name" onChange={handleNameChange} /><br />
-            <input placeholder="Number" onChange={handleNumberChange} /><br />
-            <input placeholder="Position" onChange={handlePositionChange} /><br />
-            <input placeholder="Age" onChange={handleAgeChange} /><br />
-            <input placeholder="Height" onChange={handleHeightChange} /><br />
-            <input placeholder="Weight" onChange={handleWeightChange} /><br />
-            <input placeholder="Image URL" onChange={handleImageUrlChange} /><br />
-            <button className="btn btn-primary" onClick={handleAddPlayer} >Add Player</button>
+            <form className="container">
+                    <input className="form-control" placeholder="Name" onChange={handleNameChange} /><br />
+                    <input className="form-control" placeholder="Number" onChange={handleNumberChange} /><br />
+                    <input className="form-control" placeholder="Position" onChange={handlePositionChange} /><br />
+                    <input className="form-control" placeholder="Age" onChange={handleAgeChange} /><br />
+                    <input className="form-control" placeholder="Height" onChange={handleHeightChange} /><br />
+                    <input className="form-control" placeholder="Weight" onChange={handleWeightChange} /><br />
+                    <input className="form-control" placeholder="Image URL" onChange={handleImageUrlChange} /><br />
+                    <button className="btn btn-primary" onClick={handleAddPlayer} >Add Player</button>
+            </form>
         </div>
     );
 }
