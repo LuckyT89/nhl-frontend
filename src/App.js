@@ -9,7 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NHL</h1>
+
+      <div className="header">
+        <img className="nhl-logo" src="http://media.heartlandtv.com/images/NHL+LOGO.jpg" alt="NHL"></img>
+      </div>
+      
       <Switch>
         <Route exact path="/">
           <TeamsPage />

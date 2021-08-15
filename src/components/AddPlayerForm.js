@@ -59,7 +59,7 @@ function AddPlayerForm({ addPlayer }) {
             <input placeholder="Height" onChange={handleHeightChange} /><br />
             <input placeholder="Weight" onChange={handleWeightChange} /><br />
             <input placeholder="Image URL" onChange={handleImageUrlChange} /><br />
-            <button onClick={handleAddPlayer} >Add Player</button>
+            <button className="btn btn-primary" onClick={handleAddPlayer} >Add Player</button>
         </div>
     );
 }
