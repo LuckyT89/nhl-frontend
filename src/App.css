@@ -19,7 +19,13 @@ img.nhl-logo {
 
 
 
+div.show {
+    display: block;
+}
 
+div.hide {
+    display: none;
+}
 
 
 

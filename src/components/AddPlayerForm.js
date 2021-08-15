@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function AddPlayerForm({ addPlayer }) {
+function AddPlayerForm({ addPlayer, showForm }) {
     // Set starting state for input fields
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -51,7 +51,7 @@ function AddPlayerForm({ addPlayer }) {
     }
 
     return (
-        <div>
+        <div className={showForm? "show" : "hide"} >
             <input placeholder="Name" onChange={handleNameChange} /><br />
             <input placeholder="Number" onChange={handleNumberChange} /><br />
             <input placeholder="Position" onChange={handlePositionChange} /><br />

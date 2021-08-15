@@ -63,9 +63,18 @@ function PlayersPage() {
 
 
 
+    const [showForm, setShowForm] = useState(false);
+
+    function toggleForm() {
+        setShowForm(!showForm);
+    }
+
+
+
     return (
         <div>
-            <AddPlayerForm addPlayer={addPlayer}/>
+            <button onClick={toggleForm}>Add Player</button><button>Delete Player</button>
+            <AddPlayerForm showForm={showForm} addPlayer={addPlayer}/>
             
             { playerCards }
         </div>
