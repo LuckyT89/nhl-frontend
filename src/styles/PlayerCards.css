@@ -1,0 +1,10 @@
+div.player-card {
+    border-top: 1px solid gray;
+    text-align: center;
+    padding-top: 1em;
+}
+
+div.player-card img {
+    border: 1px solid gray;
+    border-radius: 30px;
+}
