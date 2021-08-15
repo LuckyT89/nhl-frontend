@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 import TeamsPage from './components/TeamsPage';
 import PlayersPage from './components/PlayersPage';
@@ -11,9 +11,10 @@ function App() {
     <div className="App">
 
       <div className="header">
+        <Link className="home-link" to={`/`}><p className="home-link">Home</p></Link>
         <img className="nhl-logo" src="http://media.heartlandtv.com/images/NHL+LOGO.jpg" alt="NHL"></img>
       </div>
-      
+
       <Switch>
         <Route exact path="/">
           <TeamsPage />
@@ -23,6 +24,10 @@ function App() {
           <PlayersPage />
         </Route>
       </Switch>
+
+      <div className="footer">
+        <p>Images from <a href="https://www.nhl.com/">NHL.com</a><span>|</span>Stats from <a href="https://www.hockey-reference.com/">Hockey Reference</a></p>
+      </div>
     </div>
   );
 }

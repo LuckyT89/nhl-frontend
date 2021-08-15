@@ -1,6 +1,4 @@
 
-
--add hero image
 -add footer to credit NHL.com
 -clear form after adding a player
 -toggle form to hide/show
