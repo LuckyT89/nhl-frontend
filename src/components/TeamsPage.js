@@ -22,9 +22,10 @@ function HomePage() {
     const teamCards = teams.map((team) => <TeamCard key={team.id} team={team} />);
 
     return (
-        <div>
-            Home page component
+        <div className="teams-page container">
+          <div className="row">
             { teamCards }
+          </div>
         </div>
     );
 }

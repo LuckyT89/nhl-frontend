@@ -65,7 +65,6 @@ function PlayersPage() {
 
     return (
         <div>
-            Players Page component
             <AddPlayerForm addPlayer={addPlayer}/>
             
             { playerCards }

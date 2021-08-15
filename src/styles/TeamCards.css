@@ -1,0 +1,15 @@
+div.team-card {
+    border: 1px solid gray;
+    width: 300px;
+    padding: 1em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+div.team-card h2 {
+    color: gray;
+}
+
+div.team-card a {
+    text-decoration: none;
+}
