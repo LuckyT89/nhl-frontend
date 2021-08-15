@@ -1,6 +1,5 @@
 
--add player data
--add player pictures
+
 -clear form after adding a player
 -add hero image
 -change browser title
